@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+    ul{
+        list-style: none;
+        li{
+            list-style: none;
+        }
+    }
+}
+body{
+    background-color: #f5f5f5;
+}
+.heading{
+    box-shadow: 0px 1px 5px 0px rgb(0, 0, 0, 0.75);
+    .header-btns{
+        padding-inline: 60px;
+        padding-block: 10px;
+        display: flex;
+        justify-content: space-between;
+        .header-btns-my-mail{
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                background-image: url(./img/mail.png);
+                background-size: contain;
+                width: 60px;
+                height: 60px;
+                margin-right: 30px;
+                background-repeat: no-repeat;
+            }
+        }
+        .header-btns-profile{
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            &::after{
+                content: '';
+                background-image: url(./img/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f353032342f353032343530392e706e67.png);
+                background-size: contain;
+                width: 60px;
+                height: 60px;
+                margin-left: 30px;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+.main{
+    .mail-main{
+        display: flex;
+        padding-inline: 60px;
+        margin-top: 25px;
+        .mail-main-menu{
+            width: 200px;
+            .mail-main-menu-btns{
+                margin-right: 5px;
+                .mail-main-menu-btn{
+                    height: 60px;
+                    font-size: 25px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 20px;
+                    // justify-content: center;
+                    &:hover{
+                        background-color: #f4e4e4;
+                    }
+                }
+                .incoming::before{
+                    content: '';
+                    background-image: url(./img/incom.png);
+                    background-size: contain;
+                    width: 35px;
+                    height: 35px;  
+                    // margin-left: 30px;
+                    background-repeat: no-repeat;
+
+                }
+                .outgoing::before{
+                    content: '';
+                    background-image: url(./img/outcom.png);
+                    background-size: contain;
+                    width: 35px;
+                    height: 35px;  
+                    // margin-left: 30px;
+                    background-repeat: no-repeat;
+
+                }.drafts::before{
+                    content: '';
+                    background-image: url(./img/draft.png);
+                    background-size: contain;
+                    width: 35px;
+                    height: 35px;  
+                    // margin-left: 30px;
+                    background-repeat: no-repeat;
+
+                }.spam::before{
+                    content: '';
+                    background-image: url(./img/spam.png);
+                    background-size: contain;
+                    width: 35px;
+                    height: 35px;  
+                    // margin-left: 30px;
+                    background-repeat: no-repeat;
+
+                }
+            }
+        }
+        .mail-main-msg-block{
+            .msg-list{
+                .msg{
+                    width: 80vw;
+                    display: flex;
+                    height: 70px;
+                    align-items: center;
+                    border-bottom: 2px solid rgb(0, 0, 0, 0.75);
+                    .msg-mark{
+                        padding-right: 30px;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    .msg-content{
+                        display: flex;
+                        .msg-from,
+                        .msg-title{
+                            font-size: 20px;
+                        }
+                        .msg-title{
+                            width: 20vw;
+                        }
+                        .msg-from{
+                            width: 200px
+                        }
+                        .msg-contain{
+                            font-size: 20px;
+                            color: gray;
+                            margin-left: 10px;
+                            width: 30vw;   
+                            text-align: justify;
+                        }
+                    }
+                        .msg-date{
+                            // position: relative;
+                            // right: 0;
+                            // width: 50px;
+                        display: flex;
+                        align-items: center;
+                        &::before{
+                            content: '';
+                            background-image: url(./img/attach_26.png);
+                            background-size: contain;
+                            width: 20px;
+                            height: 20px;
+                            background-repeat: no-repeat;
+                            margin-top: 5px;
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 1200px){
+    .mail-main{
+        padding-inline: 30px!important;
+        .msg{
+        // font-size: 20px!important;
+        width: 600px!important;
+            .msg-title{
+            width: 250px!important;
+            }
+            .msg-contain{
+            display: none!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .heading{
+        .header-btns{
+            .header-btns-my-mail{
+                font-size: 25px;
+            }
+            .header-btns-profile{
+                font-size: 20px;
+            }
+        }
+    }
+
+    .mail-main{
+        .mail-main-menu{
+            .mail-main-menu-btns{
+                .mail-main-menu-btn{
+                    font-size: 16px!important;
+                }
+            }
+        }
+        .msg{
+            width: 400px!important;
+            .msg-mark{
+                width: 30px!important;
+                img{
+                    margin-right: 10px!important;
+                }
+            }
+            .msg-content{
+                display: block!important;
+                .msg-from,
+                .msg-title{
+                    display: block!important;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .heading{
+        .header-btns{
+            padding: 0!important;
+            .header-btns-my-mail{
+                font-size: 20px;
+                text-align: center;
+                &::before
+                {
+                    width: 50px;
+                    height: 50px;
+                    margin: 10px;
+                }
+            }
+            .header-btns-profile{
+                font-size: 16px;
+                &::after
+                {
+                    width: 50px;
+                    height: 50px;
+                    margin: 10px;
+                } 
+            }
+        }
+    }
+    .mail-main{
+        padding: 0!important;
+        justify-content: center!important;
+        .mail-main-menu{
+            width: 55px!important;
+            .mail-main-menu-btns{
+                .mail-main-menu-btn{
+                    
+                    // width: 0;
+                    font-size: 0!important;
+                    padding-inline: 10px!important;
+                }
+            }
+        }
+        .mail-main-msg-block{
+            .msg-list{
+
+                .msg{
+                    width: 300px!important;
+                    .msg-content{
+                        .msg-from,
+                        .msg-title,
+                        .msg-contain{
+                        font-size: 16px!important;
+                        }
+                        .msg-title{
+                            width: 200px!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

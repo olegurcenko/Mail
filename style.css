@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+* ul {
+  list-style: none;
+}
+* ul li {
+  list-style: none;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+.heading {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.heading .header-btns {
+  padding-inline: 60px;
+  padding-block: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.heading .header-btns .header-btns-my-mail {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+}
+.heading .header-btns .header-btns-my-mail::before {
+  content: "";
+  background-image: url(./img/mail.png);
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+  background-repeat: no-repeat;
+}
+.heading .header-btns .header-btns-profile {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+.heading .header-btns .header-btns-profile::after {
+  content: "";
+  background-image: url(./img/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f353032342f353032343530392e706e67.png);
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  margin-left: 30px;
+  background-repeat: no-repeat;
+}
+
+.main .mail-main {
+  display: flex;
+  padding-inline: 60px;
+  margin-top: 25px;
+}
+.main .mail-main .mail-main-menu {
+  width: 200px;
+}
+.main .mail-main .mail-main-menu .mail-main-menu-btns {
+  margin-right: 5px;
+}
+.main .mail-main .mail-main-menu .mail-main-menu-btns .mail-main-menu-btn {
+  height: 60px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+.main .mail-main .mail-main-menu .mail-main-menu-btns .mail-main-menu-btn:hover {
+  background-color: #f4e4e4;
+}
+.main .mail-main .mail-main-menu .mail-main-menu-btns .incoming::before {
+  content: "";
+  background-image: url(./img/incom.png);
+  background-size: contain;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+}
+.main .mail-main .mail-main-menu .mail-main-menu-btns .outgoing::before {
+  content: "";
+  background-image: url(./img/outcom.png);
+  background-size: contain;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+}
+.main .mail-main .mail-main-menu .mail-main-menu-btns .drafts::before {
+  content: "";
+  background-image: url(./img/draft.png);
+  background-size: contain;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+}
+.main .mail-main .mail-main-menu .mail-main-menu-btns .spam::before {
+  content: "";
+  background-image: url(./img/spam.png);
+  background-size: contain;
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg {
+  width: 80vw;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.75);
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-mark {
+  padding-right: 30px;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-mark img {
+  width: 20px;
+  height: 20px;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-content {
+  display: flex;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-from,
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-title {
+  font-size: 20px;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-title {
+  width: 20vw;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-from {
+  width: 200px;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-contain {
+  font-size: 20px;
+  color: gray;
+  margin-left: 10px;
+  width: 30vw;
+  text-align: justify;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-date {
+  display: flex;
+  align-items: center;
+}
+.main .mail-main .mail-main-msg-block .msg-list .msg .msg-date::before {
+  content: "";
+  background-image: url(./img/attach_26.png);
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  margin-top: 5px;
+  margin-right: 3px;
+}
+
+@media screen and (max-width: 1200px) {
+  .mail-main {
+    padding-inline: 30px !important;
+  }
+  .mail-main .msg {
+    width: 600px !important;
+  }
+  .mail-main .msg .msg-title {
+    width: 250px !important;
+  }
+  .mail-main .msg .msg-contain {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .heading .header-btns .header-btns-my-mail {
+    font-size: 25px;
+  }
+  .heading .header-btns .header-btns-profile {
+    font-size: 20px;
+  }
+  .mail-main .mail-main-menu .mail-main-menu-btns .mail-main-menu-btn {
+    font-size: 16px !important;
+  }
+  .mail-main .msg {
+    width: 400px !important;
+  }
+  .mail-main .msg .msg-mark {
+    width: 30px !important;
+  }
+  .mail-main .msg .msg-mark img {
+    margin-right: 10px !important;
+  }
+  .mail-main .msg .msg-content {
+    display: block !important;
+  }
+  .mail-main .msg .msg-content .msg-from,
+  .mail-main .msg .msg-content .msg-title {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .heading .header-btns {
+    padding: 0 !important;
+  }
+  .heading .header-btns .header-btns-my-mail {
+    font-size: 20px;
+    text-align: center;
+  }
+  .heading .header-btns .header-btns-my-mail::before {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+  .heading .header-btns .header-btns-profile {
+    font-size: 16px;
+  }
+  .heading .header-btns .header-btns-profile::after {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+  .mail-main {
+    padding: 0 !important;
+    justify-content: center !important;
+  }
+  .mail-main .mail-main-menu {
+    width: 55px !important;
+  }
+  .mail-main .mail-main-menu .mail-main-menu-btns .mail-main-menu-btn {
+    font-size: 0 !important;
+    padding-inline: 10px !important;
+  }
+  .mail-main .mail-main-msg-block .msg-list .msg {
+    width: 300px !important;
+  }
+  .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-from,
+  .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-title,
+  .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-contain {
+    font-size: 16px !important;
+  }
+  .mail-main .mail-main-msg-block .msg-list .msg .msg-content .msg-title {
+    width: 200px !important;
+  }
+}/*# sourceMappingURL=style.css.map */
